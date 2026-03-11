@@ -1,4 +1,4 @@
-# E-commerce Recommendation System 🎬
+# E-commerce Recommendation System 
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -6,11 +6,11 @@
 
 A comprehensive end-to-end machine learning project for building a **product recommendation engine** using collaborative filtering and deep learning techniques.
 
-## 📊 Dataset
+## Dataset
 
 **MovieLens 100K** - 100,000 ratings from 943 users on 1,682 movies
 
-## ⚡ Quick Start
+##  Quick Start
 
 ```bash
 # Clone repository
@@ -31,7 +31,7 @@ jupyter notebook
 
 **That's it!** The notebook will auto-download the dataset and run the analysis.
 
-## 📚 Notebooks
+## Notebooks
 
 Run these in order:
 
@@ -42,7 +42,7 @@ Run these in order:
 | `03_matrix_factorization.ipynb` | SVD decomposition & latent factors | 5 min |
 | `04_deep_learning.ipynb` | Neural Collaborative Filtering model | 20 min |
 
-## 🎯 Algorithms Implemented
+## Algorithms Implemented
 
 ### 1. User-Based Collaborative Filtering
 - Finds similar users → recommends items they liked
@@ -67,20 +67,20 @@ Run these in order:
 ### 5. Ensemble Model
 - Combines all three algorithms with weighted voting
 - File: [`src/recommender.py`](src/recommender.py)
-- Expected RMSE: ~0.83 ⭐
+- Expected RMSE: ~0.83 
 
-## 📊 Performance Results
+## Performance Results
 
 | Model | RMSE | MAE | Status |
 |-------|------|-----|--------|
 | Baseline (Mean) | 1.20 | 0.95 | - |
-| User-Based CF | 0.95 | 0.75 | ✅ |
-| Item-Based CF | 0.92 | 0.72 | ✅ |
-| Matrix Factorization (SVD) | 0.88 | 0.68 | ✅ |
-| Deep Learning (NCF) | 0.85 | 0.65 | ✅ |
-| **Ensemble (Best)** | **0.83** | **0.63** | ✅ |
+| User-Based CF | 0.95 | 0.75 |
+| Item-Based CF | 0.92 | 0.72 |
+| Matrix Factorization (SVD) | 0.88 | 0.68 |
+| Deep Learning (NCF) | 0.85 | 0.65 |
+| **Ensemble (Best)** | **0.83** | **0.63** |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── data/
@@ -111,7 +111,7 @@ Run these in order:
 └── API_REFERENCE.md     # Python API documentation
 ```
 
-## 🔧 Installation
+## Installation
 
 ### Prerequisites
 - Python 3.9+
@@ -144,7 +144,7 @@ Run these in order:
 
 5. **Open and run** `notebooks/01_data_loading.ipynb`
 
-## 📚 Usage
+## Usage
 
 ### Load Data
 ```python
@@ -192,7 +192,7 @@ print(f"Precision@10: {precision:.4f}")
 
 See [API_REFERENCE.md](API_REFERENCE.md) for complete documentation.
 
-## 📈 Metrics
+## Metrics
 
 - **RMSE** - Root Mean Squared Error (overall prediction accuracy)
 - **NDCG@K** - Normalized Discounted Cumulative Gain (ranking quality)
@@ -201,7 +201,7 @@ See [API_REFERENCE.md](API_REFERENCE.md) for complete documentation.
 - **Coverage** - Diversity of recommendations
 - **Diversity** - Average dissimilarity between recommended items
 
-## 💡 Resume Impact
+## Resume Impact
 
 Use this as your resume bullet point:
 
@@ -212,14 +212,14 @@ filtering. Achieved 0.83 RMSE and 82% NDCG@10 with ensemble approach,
 demonstrating 28% improvement over baseline."
 ```
 
-## 📖 Documentation
+## Documentation
 
 - [QUICKSTART.md](QUICKSTART.md) - Get started in 5 minutes
 - [SETUP.md](SETUP.md) - Detailed setup & troubleshooting
 - [API_REFERENCE.md](API_REFERENCE.md) - Python API documentation
 - [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) - Complete project overview
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Feel free to:
 - Report bugs
@@ -227,17 +227,17 @@ Contributions are welcome! Feel free to:
 - Add new features (e.g., implicit feedback, cold-start strategies)
 - Improve documentation
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Dataset**: MovieLens (https://grouplens.org/datasets/movielens/)
 - **Papers**: Collaborative Filtering, Matrix Factorization, Neural Collaborative Filtering
 - **Libraries**: pandas, scikit-learn, TensorFlow, PyTorch
 
-## 📧 Contact
+## Contact
 
 Have questions? Check the documentation files or open an issue on GitHub.
 
