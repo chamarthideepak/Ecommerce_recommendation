@@ -1,15 +1,15 @@
 # E-commerce Recommendation System - Setup & Getting Started Guide
 
-## ✅ What's Been Completed
+## What's Been Completed
 
-✓ Project structure created with all necessary directories  
-✓ Python virtual environment set up  
-✓ Requirements installed (pandas, numpy, scikit-learn, tensorflow, torch, jupyter, etc.)  
-✓ 4 comprehensive Jupyter notebooks created  
-✓ Python modules for data loading, feature engineering, and models  
-✓ Evaluation metrics module  
+Project structure created with all necessary directories 
+Python virtual environment set up 
+Requirements installed (pandas, numpy, scikit-learn, tensorflow, torch, jupyter, etc.) 
+4 comprehensive Jupyter notebooks created 
+Python modules for data loading, feature engineering, and models 
+Evaluation metrics module 
 
-## 📋 Next Steps
+## Next Steps
 
 ### Step 1: Download the MovieLens 100K Dataset
 
@@ -41,7 +41,7 @@ This notebook will:
 
 ---
 
-## 🔄 Project Flow
+## Project Flow
 
 ### Phase 1: Data Exploration (1 notebook)
 **File:** `notebooks/01_data_loading.ipynb`
@@ -77,7 +77,7 @@ This notebook will:
 
 ---
 
-## 📊 Models Implemented
+## Models Implemented
 
 ### 1. **User-Based Collaborative Filtering** 
 - Finds similar users and recommends based on their preferences
@@ -101,7 +101,7 @@ This notebook will:
 
 ---
 
-## 🎯 Expected Results
+## Expected Results
 
 After running all notebooks:
 
@@ -115,7 +115,7 @@ After running all notebooks:
 
 ---
 
-## 🚀 Running Individual Components
+## Running Individual Components
 
 ### Option 1: Run Everything Automatically
 ```powershell
@@ -158,37 +158,37 @@ print(f'Recommendations for user 1: {recs}')
 
 ---
 
-## 📁 Project Structure Reference
+## Project Structure Reference
 
 ```
 s:\projects\Temp\Ecommerce_recommendation\
 ├── data/
-│   ├── raw/              # Raw dataset (downloaded here)
-│   ├── processed/        # Cleaned data
-│   └── features/         # Feature-engineered data
-├── notebooks/            # Jupyter notebooks
-│   ├── 01_data_loading.ipynb
-│   ├── 02_collaborative_filtering.ipynb
-│   ├── 03_matrix_factorization.ipynb
-│   └── 04_deep_learning.ipynb
-├── src/                  # Python modules
-│   ├── data_loader.py
-│   ├── feature_engineering.py
-│   ├── recommender.py
-│   └── models/
-│       ├── collaborative.py
-│       └── matrix_factorization.py
+│ ├── raw/ # Raw dataset (downloaded here)
+│ ├── processed/ # Cleaned data
+│ └── features/ # Feature-engineered data
+├── notebooks/ # Jupyter notebooks
+│ ├── 01_data_loading.ipynb
+│ ├── 02_collaborative_filtering.ipynb
+│ ├── 03_matrix_factorization.ipynb
+│ └── 04_deep_learning.ipynb
+├── src/ # Python modules
+│ ├── data_loader.py
+│ ├── feature_engineering.py
+│ ├── recommender.py
+│ └── models/
+│ ├── collaborative.py
+│ └── matrix_factorization.py
 ├── evaluation/
-│   └── metrics.py        # RMSE, NDCG, Precision, Recall
-├── venv/                 # Virtual environment
-├── requirements.txt      # Dependencies
+│ └── metrics.py # RMSE, NDCG, Precision, Recall
+├── venv/ # Virtual environment
+├── requirements.txt # Dependencies
 ├── README.md
-└── SETUP.md              # This file
+└── SETUP.md # This file
 ```
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Issue: "Module not found" errors
 **Solution:**
@@ -221,7 +221,7 @@ s:\projects\Temp\Ecommerce_recommendation\
 
 ---
 
-## 💡 Quick Commands
+## Quick Commands
 
 ```powershell
 # Activate virtual environment
@@ -248,7 +248,7 @@ python -c "import tensorflow as tf; print(tf.config.list_physical_devices())"
 
 ---
 
-## 📈 Performance Benchmarks
+## Performance Benchmarks
 
 **Runtime Estimates on Standard Machine:**
 - Data Loading: ~5 seconds
@@ -261,20 +261,20 @@ python -c "import tensorflow as tf; print(tf.config.list_physical_devices())"
 
 ---
 
-## 🎓 Key Concepts to Understand
+## Key Concepts to Understand
 
 1. **User-Item Matrix:** Sparse matrix where rows=users, columns=items, values=ratings
 2. **Sparsity:** Most users haven't rated most items (99%+ missing)
 3. **Latent Factors:** Hidden features learned by matrix factorization
 4. **Cold-start Problem:** Recommending for new users/items with no history
 5. **Evaluation Metrics:**
-   - RMSE: Penalizes larger errors heavily
-   - NDCG@10: Ranking quality metric
-   - Precision@K: Fraction of relevant recommendations
+- RMSE: Penalizes larger errors heavily
+- NDCG@10: Ranking quality metric
+- Precision@K: Fraction of relevant recommendations
 
 ---
 
-## 📚 Resume Bullet Points
+## Resume Bullet Points
 
 After completing this project, use these in your resume:
 
@@ -295,34 +295,34 @@ results on MovieLens benchmark dataset."
 
 ---
 
-## 🎯 Next: What to Do After
+## Next: What to Do After
 
 Once you get baseline results:
 
 1. **Improve Models:**
-   - Tune hyperparameters (n_factors, n_neighbors, etc.)
-   - Add cold-start handling for new users
-   - Implement implicit feedback
+- Tune hyperparameters (n_factors, n_neighbors, etc.)
+- Add cold-start handling for new users
+- Implement implicit feedback
 
 2. **Advanced Features:**
-   - Content-based features (movie genres, metadata)
-   - Temporal dynamics (time-aware recommendations)
-   - Context-aware features
+- Content-based features (movie genres, metadata)
+- Temporal dynamics (time-aware recommendations)
+- Context-aware features
 
 3. **Deployment:**
-   - Create REST API with Flask
-   - Build web dashboard with Plotly
-   - Deploy to cloud (AWS/GCP/Azure)
+- Create REST API with Flask
+- Build web dashboard with Plotly
+- Deploy to cloud (AWS/GCP/Azure)
 
 4. **Scale Up:**
-   - Test with MovieLens 1M or 25M
-   - Implement Spark for distributed computing
-   - Use Redis for caching
+- Test with MovieLens 1M or 25M
+- Implement Spark for distributed computing
+- Use Redis for caching
 
 ---
 
-## ✨ Good Luck!
+## Good Luck!
 
 Start with **01_data_loading.ipynb** and work through each notebook sequentially.
 
-**All the code is ready - just run the notebooks!** 🚀
+**All the code is ready - just run the notebooks!** 

@@ -4,7 +4,7 @@ Complete guide to using the Python modules in your recommendation system.
 
 ---
 
-## 📚 Data Loading Module
+## Data Loading Module
 
 ### `MovieLensDataLoader`
 
@@ -55,7 +55,7 @@ matrix = loader.get_user_item_matrix()
 
 ---
 
-## 🎯 Collaborative Filtering Models
+## Collaborative Filtering Models
 
 ### `UserBasedCF`
 
@@ -122,7 +122,7 @@ recommendations = model.recommend(user_id=1, n_items=10)
 
 ---
 
-## 🔢 Matrix Factorization
+## Matrix Factorization
 
 ### `SVDRecommender`
 
@@ -173,7 +173,7 @@ print(f"Factors needed for 90% variance: {n_factors_90}")
 
 ---
 
-## 🤖 Ensemble Recommender
+## Ensemble Recommender
 
 ### `EnsembleRecommender`
 
@@ -184,9 +184,9 @@ from src.recommender import EnsembleRecommender
 
 # Initialize (with uniform weights by default)
 model = EnsembleRecommender(weights={
-    'user_cf': 0.33,
-    'item_cf': 0.33,
-    'svd': 0.34
+'user_cf': 0.33,
+'item_cf': 0.33,
+'svd': 0.34
 })
 
 # Train all sub-models
@@ -208,10 +208,10 @@ svd_recs = model.recommend(user_id=1, n_items=10, method='svd')
 # Get predictions from all models
 predictions = model.get_model_predictions(user_id=1, item_id=100)
 # Output: {
-#     'user_cf': 4.20,
-#     'item_cf': 4.10,
-#     'svd': 4.15,
-#     'ensemble': 4.15
+# 'user_cf': 4.20,
+# 'item_cf': 4.10,
+# 'svd': 4.15,
+# 'ensemble': 4.15
 # }
 
 # Benchmark
@@ -230,7 +230,7 @@ predictions = model.get_model_predictions(user_id=1, item_id=100)
 
 ---
 
-## 🎛️ Recommendation System
+## ️ Recommendation System
 
 ### `RecommendationSystem`
 
@@ -254,10 +254,10 @@ recommendations = system.recommend(user_id=1, n_items=10)
 
 # Example: Compare different models
 for model_type in ['user_cf', 'item_cf', 'svd', 'ensemble']:
-    system = RecommendationSystem(model_type=model_type)
-    system.fit(user_item_matrix)
-    recs = system.recommend(user_id=1, n_items=5)
-    print(f"{model_type}: {recs}")
+system = RecommendationSystem(model_type=model_type)
+system.fit(user_item_matrix)
+recs = system.recommend(user_id=1, n_items=5)
+print(f"{model_type}: {recs}")
 ```
 
 **Parameters:**
@@ -265,23 +265,23 @@ for model_type in ['user_cf', 'item_cf', 'svd', 'ensemble']:
 
 ---
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 ### All Metrics Functions
 
 ```python
 from evaluation.metrics import (
-    rmse, mae, precision_at_k, recall_at_k, 
-    ndcg_at_k, mean_average_precision, 
-    coverage, diversity
+rmse, mae, precision_at_k, recall_at_k, 
+ndcg_at_k, mean_average_precision, 
+coverage, diversity
 )
 
 # Regression metrics
 y_true = [4.0, 5.0, 3.0, 2.0]
 y_pred = [4.2, 4.8, 3.1, 2.1]
 
-rmse_score = rmse(y_true, y_pred)         # 0.125
-mae_score = mae(y_true, y_pred)           # 0.125
+rmse_score = rmse(y_true, y_pred) # 0.125
+mae_score = mae(y_true, y_pred) # 0.125
 
 # Ranking metrics
 recommendations = [123, 456, 789, 234]
@@ -320,7 +320,7 @@ cov = coverage(all_predictions, n_total_items)
 
 ---
 
-## 🔄 Complete Workflow Example
+## Complete Workflow Example
 
 ```python
 import pandas as pd
@@ -339,14 +339,14 @@ train_ratings, test_ratings = train_test_split(ratings, test_size=0.2)
 
 # 3. Create matrices
 train_matrix = train_ratings.pivot_table(
-    index='user_id', 
-    columns='item_id', 
-    values='rating'
+index='user_id', 
+columns='item_id', 
+values='rating'
 )
 test_matrix = test_ratings.pivot_table(
-    index='user_id', 
-    columns='item_id', 
-    values='rating'
+index='user_id', 
+columns='item_id', 
+values='rating'
 )
 
 # 4. Train ensemble model
@@ -358,17 +358,17 @@ predictions = []
 actuals = []
 
 for _, row in test_ratings.head(500).iterrows():
-    user_id = row['user_id']
-    item_id = row['item_id']
-    
-    if user_id in train_matrix.index and item_id in train_matrix.columns:
-        pred = system.predict(user_id, item_id)
-        predictions.append(pred)
-        actuals.append(row['rating'])
+user_id = row['user_id']
+item_id = row['item_id']
+
+if user_id in train_matrix.index and item_id in train_matrix.columns:
+pred = system.predict(user_id, item_id)
+predictions.append(pred)
+actuals.append(row['rating'])
 
 # 6. Calculate metrics
 rmse_score = rmse(actuals, predictions)
-print(f"RMSE: {rmse_score:.4f}")  # Output: RMSE: 0.8345
+print(f"RMSE: {rmse_score:.4f}") # Output: RMSE: 0.8345
 
 # 7. Get recommendations for specific user
 user_recs = system.recommend(user_id=1, n_items=10)
@@ -378,28 +378,28 @@ print(f"Top 10 for User 1: {user_recs}")
 
 ---
 
-## 🚨 Common Issues & Solutions
+## Common Issues & Solutions
 
 ### Issue: "user_id not in matrix"
 ```python
 # Check if user exists
 if user_id not in train_matrix.index:
-    print(f"User {user_id} not in training data")
-    # Use cold-start strategy
+print(f"User {user_id} not in training data")
+# Use cold-start strategy
 else:
-    predictions = model.predict(user_id, item_id)
+predictions = model.predict(user_id, item_id)
 ```
 
 ### Issue: "NaN predictions"
 ```python
 # Check for empty training data
 if train_matrix.empty:
-    print("No training data!")
-    
+print("No training data!")
+
 # Handle missing values
 pred = model.predict(user_id, item_id)
 if pd.isna(pred):
-    pred = 3.0  # Default middle rating
+pred = 3.0 # Default middle rating
 ```
 
 ### Issue: "Memory error with large matrix"
@@ -414,7 +414,7 @@ sample_ratings = ratings.sample(n=10000, random_state=42)
 
 ---
 
-## 📈 Performance Tips
+## Performance Tips
 
 ### Optimization 1: Cache Similarities
 ```python
@@ -428,15 +428,15 @@ model.fit(matrix)
 ```python
 # Instead of this (slow):
 for user_id in user_ids:
-    for item_id in item_ids:
-        pred = model.predict(user_id, item_id)
+for item_id in item_ids:
+pred = model.predict(user_id, item_id)
 
 # Do this (faster):
 predictions = []
 for user_id in user_ids:
-    for item_id in item_ids:
-        pred = model.predict(user_id, item_id)
-        predictions.append(pred)
+for item_id in item_ids:
+pred = model.predict(user_id, item_id)
+predictions.append(pred)
 
 # Or vectorized:
 import numpy as np
@@ -448,14 +448,14 @@ item_indices = np.array([train_matrix.columns.tolist().index(i) for i in item_id
 ### Optimization 3: Reduce Factors for SVD
 ```python
 # Use fewer factors for faster training
-model = SVDRecommender(n_factors=20)  # Instead of 50
+model = SVDRecommender(n_factors=20) # Instead of 50
 model.fit(matrix)
 # Faster with minimal quality loss
 ```
 
 ---
 
-## 🎓 Next Steps
+## Next Steps
 
 1. **Run the notebooks** to see these in action
 2. **Modify hyperparameters** to improve results
@@ -463,4 +463,4 @@ model.fit(matrix)
 4. **Create a dashboard** using Plotly
 5. **Deploy to production** using your favorite platform
 
-Good luck! 🚀
+Good luck! 

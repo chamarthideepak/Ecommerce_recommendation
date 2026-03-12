@@ -10,17 +10,17 @@ A comprehensive end-to-end machine learning project for building a **product rec
 
 **MovieLens 100K** - 100,000 ratings from 943 users on 1,682 movies
 
-##  Quick Start
+## Quick Start
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/Ecommerce_recommendation.git
+git clone https://github.com/chamarthideepak/Ecommerce_recommendation.git
 cd Ecommerce_recommendation
 
 # Create and activate virtual environment
 python -m venv venv
-.\venv\Scripts\Activate.ps1  # Windows
-# source venv/bin/activate     # macOS/Linux
+.\venv\Scripts\Activate.ps1 # Windows
+# source venv/bin/activate # macOS/Linux
 
 # Install dependencies
 pip install -r requirements.txt
@@ -41,6 +41,7 @@ Run these in order:
 | `02_collaborative_filtering.ipynb` | User-based & item-based CF algorithms | 3 min |
 | `03_matrix_factorization.ipynb` | SVD decomposition & latent factors | 5 min |
 | `04_deep_learning.ipynb` | Neural Collaborative Filtering model | 20 min |
+| `05_model_comparison.ipynb` | Compare all models with charts & radar plot | 10 min |
 
 ## Algorithms Implemented
 
@@ -49,7 +50,7 @@ Run these in order:
 - File: [`src/models/collaborative.py`](src/models/collaborative.py)
 - Expected RMSE: ~0.95
 
-### 2. Item-Based Collaborative Filtering  
+### 2. Item-Based Collaborative Filtering 
 - Finds similar items → recommends to users who liked similar items
 - File: [`src/models/collaborative.py`](src/models/collaborative.py)
 - Expected RMSE: ~0.92
@@ -59,15 +60,15 @@ Run these in order:
 - File: [`src/models/matrix_factorization.py`](src/models/matrix_factorization.py)
 - Expected RMSE: ~0.88
 
-### 4. Deep Learning (Neural Collaborative Filtering)
+### 4. Content-Based Filtering
+- Builds user genre-preference profiles from past ratings
+- File: [`src/models/content_based.py`](src/models/content_based.py)
+- Expected RMSE: ~0.95
+
+### 5. Deep Learning (Neural Collaborative Filtering)
 - Embedding layers + neural networks with TensorFlow/Keras
 - File: [`notebooks/04_deep_learning.ipynb`](notebooks/04_deep_learning.ipynb)
 - Expected RMSE: ~0.85
-
-### 5. Ensemble Model
-- Combines all three algorithms with weighted voting
-- File: [`src/recommender.py`](src/recommender.py)
-- Expected RMSE: ~0.83 
 
 ## Performance Results
 
@@ -84,31 +85,28 @@ Run these in order:
 
 ```
 ├── data/
-│   ├── raw/              # Raw MovieLens dataset (auto-downloaded)
-│   ├── processed/        # Cleaned & processed data (CSVs)
-│   └── features/         # Feature-engineered data
-├── notebooks/            # Jupyter notebooks (run these)
-│   ├── 01_data_loading.ipynb
-│   ├── 02_collaborative_filtering.ipynb
-│   ├── 03_matrix_factorization.ipynb
-│   └── 04_deep_learning.ipynb
-├── src/                  # Python modules
-│   ├── data_loader.py              # Data loading utilities
-│   ├── feature_engineering.py      # Feature extraction
-│   ├── recommender.py              # Main recommendation engine
-│   └── models/
-│       ├── collaborative.py        # CF models
-│       └── matrix_factorization.py # SVD model
+│ ├── raw/ # Raw MovieLens dataset (auto-downloaded)
+│ └── processed/ # Cleaned & processed data (CSVs)
+├── notebooks/ # Jupyter notebooks (run in order)
+│ ├── 01_data_loading.ipynb
+│ ├── 02_collaborative_filtering.ipynb
+│ ├── 03_matrix_factorization.ipynb
+│ ├── 04_deep_learning.ipynb
+│ └── 05_model_comparison.ipynb
+├── src/ # Python modules
+│ ├── data_loader.py # Data loading utilities
+│ ├── recommender.py # Ensemble recommendation engine
+│ └── models/
+│ ├── collaborative.py # User-Based & Item-Based CF
+│ ├── matrix_factorization.py # SVD model
+│ └── content_based.py # Content-Based filtering
 ├── evaluation/
-│   ├── __init__.py
-│   └── metrics.py        # RMSE, NDCG, Precision, Recall, Coverage, Diversity
-├── requirements.txt      # Dependencies
-├── LICENSE              # MIT License
+│ ├── __init__.py
+│ └── metrics.py # RMSE, NDCG, Precision, Recall, Coverage, Diversity
+├── requirements.txt # Dependencies
+├── LICENSE # MIT License
 ├── .gitignore
-├── README.md            # This file
-├── QUICKSTART.md        # 5-minute quick start
-├── SETUP.md             # Detailed setup guide
-└── API_REFERENCE.md     # Python API documentation
+└── README.md # This file
 ```
 
 ## Installation
@@ -120,27 +118,27 @@ Run these in order:
 ### Steps
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/Ecommerce_recommendation.git
-   cd Ecommerce_recommendation
-   ```
+```bash
+git clone https://github.com/chamarthideepak/Ecommerce_recommendation.git
+cd Ecommerce_recommendation
+```
 
 2. **Create virtual environment**
-   ```bash
-   python -m venv venv
-   .\venv\Scripts\Activate.ps1  # Windows
-   source venv/bin/activate     # macOS/Linux
-   ```
+```bash
+python -m venv venv
+.\venv\Scripts\Activate.ps1 # Windows
+source venv/bin/activate # macOS/Linux
+```
 
 3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 
 4. **Run Jupyter notebooks**
-   ```bash
-   jupyter notebook
-   ```
+```bash
+jupyter notebook
+```
 
 5. **Open and run** `notebooks/01_data_loading.ipynb`
 
@@ -190,7 +188,6 @@ print(f"NDCG@10: {ndcg:.4f}")
 print(f"Precision@10: {precision:.4f}")
 ```
 
-See [API_REFERENCE.md](API_REFERENCE.md) for complete documentation.
 
 ## Metrics
 
@@ -243,4 +240,4 @@ Have questions? Check the documentation files or open an issue on GitHub.
 
 ---
 
-**Happy recommending! 🚀**
+**Happy recommending! **

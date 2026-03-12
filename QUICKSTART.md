@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-## 🚀 Get Started in 5 Minutes
+## Get Started in 5 Minutes
 
 ### Step 1: Activate Virtual Environment
 ```powershell
@@ -23,10 +23,10 @@ This opens your browser to Jupyter Lab.
 3. Press `Ctrl+A` then `Shift+Enter` to run all cells
 
 **What happens:**
-- ✅ MovieLens 100K dataset downloads (~5 MB)
-- ✅ Data loads automatically
-- ✅ Statistics and visualizations appear
-- ✅ Files saved to `data/processed/`
+- MovieLens 100K dataset downloads (~5 MB)
+- Data loads automatically
+- Statistics and visualizations appear
+- Files saved to `data/processed/`
 
 ### Step 4: Run Next Notebook
 Once Step 3 completes:
@@ -40,7 +40,7 @@ Once Step 3 completes:
 
 ---
 
-## 📊 What Each Notebook Does
+## What Each Notebook Does
 
 | Notebook | Purpose | Time | Outputs |
 |----------|---------|------|---------|
@@ -51,7 +51,7 @@ Once Step 3 completes:
 
 ---
 
-## 🎯 Success Indicators
+## Success Indicators
 
 After each notebook, you should see:
 
@@ -99,7 +99,7 @@ Top 10 recommendations for User 1:
 
 ---
 
-## 🔍 If Something Goes Wrong
+## If Something Goes Wrong
 
 ### Error: "No module named 'tensorflow'"
 ```powershell
@@ -120,7 +120,7 @@ The model is training! This is normal. Check output in terminal.
 
 ---
 
-## 💻 System Requirements
+## System Requirements
 
 - **RAM:** 4GB minimum (8GB recommended)
 - **Disk Space:** 1GB minimum
@@ -129,35 +129,35 @@ The model is training! This is normal. Check output in terminal.
 
 ---
 
-## 📈 Expected Timeline
+## Expected Timeline
 
 - **Total project time:** 30-40 minutes
-  - Data loading: 2 min ✅
-  - Collaborative filtering: 3 min ✅
-  - Matrix factorization: 5 min ✅
-  - Deep learning: 20-25 min ⏳
-  - Evaluation & review: 5 min ✅
+- Data loading: 2 min 
+- Collaborative filtering: 3 min 
+- Matrix factorization: 5 min 
+- Deep learning: 20-25 min 
+- Evaluation & review: 5 min 
 
 ---
 
-## 🎓 What You'll Learn
+## What You'll Learn
 
-1. ✅ How to load and preprocess recommendation data
-2. ✅ Implement collaborative filtering from scratch
-3. ✅ Apply matrix factorization techniques
-4. ✅ Build deep learning recommendation models
-5. ✅ Evaluate models using proper metrics
-6. ✅ Compare and rank different algorithms
+1. How to load and preprocess recommendation data
+2. Implement collaborative filtering from scratch
+3. Apply matrix factorization techniques
+4. Build deep learning recommendation models
+5. Evaluate models using proper metrics
+6. Compare and rank different algorithms
 
 ---
 
-## 🏁 After Completion
+## After Completion
 
 Your project structure will have:
-- ✅ Raw dataset in `data/raw/`
-- ✅ Processed data in `data/processed/`
-- ✅ Trained models in `notebooks/`
-- ✅ Comprehensive analysis and visualizations
+- Raw dataset in `data/raw/`
+- Processed data in `data/processed/`
+- Trained models in `notebooks/`
+- Comprehensive analysis and visualizations
 
 **You're ready to:**
 - Add to your GitHub portfolio
@@ -168,11 +168,11 @@ Your project structure will have:
 
 ---
 
-## 🚀 Ready?
+## Ready?
 
 1. Activate: `.\venv\Scripts\Activate.ps1`
 2. Launch: `jupyter notebook`
 3. Open: `notebooks/01_data_loading.ipynb`
 4. Run: `Ctrl+A` then `Shift+Enter`
 
-**The rest happens automatically!** 🎉
+**The rest happens automatically!** 
