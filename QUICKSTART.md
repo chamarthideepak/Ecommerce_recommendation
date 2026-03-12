@@ -140,17 +140,6 @@ The model is training! This is normal. Check output in terminal.
 
 ---
 
-## What You'll Learn
-
-1. How to load and preprocess recommendation data
-2. Implement collaborative filtering from scratch
-3. Apply matrix factorization techniques
-4. Build deep learning recommendation models
-5. Evaluate models using proper metrics
-6. Compare and rank different algorithms
-
----
-
 ## After Completion
 
 Your project structure will have:
@@ -158,15 +147,6 @@ Your project structure will have:
 - Processed data in `data/processed/`
 - Trained models in `notebooks/`
 - Comprehensive analysis and visualizations
-
-**You're ready to:**
-- Add to your GitHub portfolio
-- Write a blog post about your experience
-- Make it a resume project
-- Deploy as an API
-- Extend with more features
-
----
 
 ## Ready?
 

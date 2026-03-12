@@ -198,17 +198,6 @@ print(f"Precision@10: {precision:.4f}")
 - **Coverage** - Diversity of recommendations
 - **Diversity** - Average dissimilarity between recommended items
 
-## Resume Impact
-
-Use this as your resume bullet point:
-
-```
-"Engineered end-to-end recommendation system on MovieLens 100K (100K+ ratings) 
-using collaborative filtering, SVD matrix factorization, and neural collaborative 
-filtering. Achieved 0.83 RMSE and 82% NDCG@10 with ensemble approach, 
-demonstrating 28% improvement over baseline."
-```
-
 ## Documentation
 
 - [QUICKSTART.md](QUICKSTART.md) - Get started in 5 minutes

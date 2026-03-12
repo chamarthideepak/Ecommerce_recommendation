@@ -228,28 +228,6 @@ User 1 - Top 10 Recommendations:
 
 ---
 
-## Resume Bullet Points (Ready to Use)
-
-After completing this project, add to your resume:
-
-```
-"Engineered end-to-end recommendation system on MovieLens 100K 
-(100K+ ratings) implementing 3 algorithms: collaborative filtering, 
-SVD matrix factorization, and neural collaborative filtering. 
-Achieved 0.83 RMSE and 82% NDCG@10 with ensemble approach."
-
-"Built production-ready Python modules for data loading, feature 
-engineering, and model ensembling using pandas, scikit-learn, 
-and TensorFlow. Comprehensive evaluation suite with 10+ metrics."
-
-"Implemented and compared collaborative filtering, matrix 
-factorization, and deep learning models. Demonstrated 28% 
-improvement over baseline with ensemble method combining strengths 
-of all approaches."
-```
-
----
-
 ## File Locations
 
 | Item | Path |
